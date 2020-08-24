@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold_italic"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/contact_title_size"
+            android:text="@string/contacts" />
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/add"
+            android:fontFamily="@font/lato_bold"
+            android:background="@drawable/add_button_background"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="24dp"
+        android:hint="@string/search_hint"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:drawablePadding="5dp"
+        android:background="@drawable/search_view_background"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:autofillHints="Search contact"
+        android:inputType="text" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/dp_20"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".view.ChooseCrudOperationBottomFragment">
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_update_24"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/sp_16"
+        android:drawablePadding="@dimen/sp_16"
+        android:text="@string/update" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_delete_24"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/sp_16"
+        android:drawablePadding="@dimen/sp_16"
+        android:text="@string/delete" />
+
+</LinearLayout>
+</layout>
